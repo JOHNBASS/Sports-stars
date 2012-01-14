@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56C8998D14C18BC600BFF196 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C8998C14C18BC600BFF196 /* UIKit.framework */; };
+		56C8998F14C18BC600BFF196 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C8998E14C18BC600BFF196 /* Foundation.framework */; };
+		56C8999114C18BC600BFF196 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C8999014C18BC600BFF196 /* CoreGraphics.framework */; };
+		56C8999714C18BC600BFF196 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56C8999514C18BC600BFF196 /* InfoPlist.strings */; };
+		56C8999914C18BC600BFF196 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C8999814C18BC600BFF196 /* main.m */; };
+		56C8999D14C18BC600BFF196 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C8999C14C18BC600BFF196 /* AppDelegate.m */; };
+		56C899A014C18BC600BFF196 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C8999E14C18BC600BFF196 /* MainStoryboard.storyboard */; };
+		56C899A314C18BC600BFF196 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C899A214C18BC600BFF196 /* FirstViewController.m */; };
+		56C899A514C18BC600BFF196 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C899A414C18BC600BFF196 /* first.png */; };
+		56C899A714C18BC600BFF196 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C899A614C18BC600BFF196 /* first@2x.png */; };
+		56C899AA14C18BC600BFF196 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C899A914C18BC600BFF196 /* SecondViewController.m */; };
+		56C899AC14C18BC600BFF196 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C899AB14C18BC600BFF196 /* second.png */; };
+		56C899AE14C18BC600BFF196 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C899AD14C18BC600BFF196 /* second@2x.png */; };
+		56C899B614C18BC600BFF196 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C899B514C18BC600BFF196 /* SenTestingKit.framework */; };
+		56C899B714C18BC600BFF196 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C8998C14C18BC600BFF196 /* UIKit.framework */; };
+		56C899B814C18BC600BFF196 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C8998E14C18BC600BFF196 /* Foundation.framework */; };
+		56C899C014C18BC700BFF196 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56C899BE14C18BC700BFF196 /* InfoPlist.strings */; };
+		56C899C314C18BC700BFF196 /* Sports_starsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C899C214C18BC700BFF196 /* Sports_starsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56C899B914C18BC600BFF196 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56C8997F14C18BC600BFF196 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56C8998714C18BC600BFF196;
+			remoteInfo = "Sports-stars";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56C8998814C18BC600BFF196 /* Sports-stars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sports-stars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C8998C14C18BC600BFF196 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		56C8998E14C18BC600BFF196 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		56C8999014C18BC600BFF196 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		56C8999414C18BC600BFF196 /* Sports-stars-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sports-stars-Info.plist"; sourceTree = "<group>"; };
+		56C8999614C18BC600BFF196 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		56C8999814C18BC600BFF196 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		56C8999A14C18BC600BFF196 /* Sports-stars-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sports-stars-Prefix.pch"; sourceTree = "<group>"; };
+		56C8999B14C18BC600BFF196 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		56C8999C14C18BC600BFF196 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		56C8999F14C18BC600BFF196 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		56C899A114C18BC600BFF196 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		56C899A214C18BC600BFF196 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		56C899A414C18BC600BFF196 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		56C899A614C18BC600BFF196 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		56C899A814C18BC600BFF196 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		56C899A914C18BC600BFF196 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		56C899AB14C18BC600BFF196 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		56C899AD14C18BC600BFF196 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		56C899B414C18BC600BFF196 /* Sports-starsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sports-starsTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C899B514C18BC600BFF196 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		56C899BD14C18BC700BFF196 /* Sports-starsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sports-starsTests-Info.plist"; sourceTree = "<group>"; };
+		56C899BF14C18BC700BFF196 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		56C899C114C18BC700BFF196 /* Sports_starsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sports_starsTests.h; sourceTree = "<group>"; };
+		56C899C214C18BC700BFF196 /* Sports_starsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sports_starsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56C8998514C18BC600BFF196 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C8998D14C18BC600BFF196 /* UIKit.framework in Frameworks */,
+				56C8998F14C18BC600BFF196 /* Foundation.framework in Frameworks */,
+				56C8999114C18BC600BFF196 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56C899B014C18BC600BFF196 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C899B614C18BC600BFF196 /* SenTestingKit.framework in Frameworks */,
+				56C899B714C18BC600BFF196 /* UIKit.framework in Frameworks */,
+				56C899B814C18BC600BFF196 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56C8997D14C18BC600BFF196 = {
+			isa = PBXGroup;
+			children = (
+				56C8999214C18BC600BFF196 /* Sports-stars */,
+				56C899BB14C18BC600BFF196 /* Sports-starsTests */,
+				56C8998B14C18BC600BFF196 /* Frameworks */,
+				56C8998914C18BC600BFF196 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56C8998914C18BC600BFF196 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56C8998814C18BC600BFF196 /* Sports-stars.app */,
+				56C899B414C18BC600BFF196 /* Sports-starsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56C8998B14C18BC600BFF196 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56C8998C14C18BC600BFF196 /* UIKit.framework */,
+				56C8998E14C18BC600BFF196 /* Foundation.framework */,
+				56C8999014C18BC600BFF196 /* CoreGraphics.framework */,
+				56C899B514C18BC600BFF196 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56C8999214C18BC600BFF196 /* Sports-stars */ = {
+			isa = PBXGroup;
+			children = (
+				56C8999B14C18BC600BFF196 /* AppDelegate.h */,
+				56C8999C14C18BC600BFF196 /* AppDelegate.m */,
+				56C8999E14C18BC600BFF196 /* MainStoryboard.storyboard */,
+				56C899A114C18BC600BFF196 /* FirstViewController.h */,
+				56C899A214C18BC600BFF196 /* FirstViewController.m */,
+				56C899A414C18BC600BFF196 /* first.png */,
+				56C899A614C18BC600BFF196 /* first@2x.png */,
+				56C899A814C18BC600BFF196 /* SecondViewController.h */,
+				56C899A914C18BC600BFF196 /* SecondViewController.m */,
+				56C899AB14C18BC600BFF196 /* second.png */,
+				56C899AD14C18BC600BFF196 /* second@2x.png */,
+				56C8999314C18BC600BFF196 /* Supporting Files */,
+			);
+			path = "Sports-stars";
+			sourceTree = "<group>";
+		};
+		56C8999314C18BC600BFF196 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				56C8999414C18BC600BFF196 /* Sports-stars-Info.plist */,
+				56C8999514C18BC600BFF196 /* InfoPlist.strings */,
+				56C8999814C18BC600BFF196 /* main.m */,
+				56C8999A14C18BC600BFF196 /* Sports-stars-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56C899BB14C18BC600BFF196 /* Sports-starsTests */ = {
+			isa = PBXGroup;
+			children = (
+				56C899C114C18BC700BFF196 /* Sports_starsTests.h */,
+				56C899C214C18BC700BFF196 /* Sports_starsTests.m */,
+				56C899BC14C18BC700BFF196 /* Supporting Files */,
+			);
+			path = "Sports-starsTests";
+			sourceTree = "<group>";
+		};
+		56C899BC14C18BC700BFF196 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				56C899BD14C18BC700BFF196 /* Sports-starsTests-Info.plist */,
+				56C899BE14C18BC700BFF196 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56C8998714C18BC600BFF196 /* Sports-stars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56C899C614C18BC700BFF196 /* Build configuration list for PBXNativeTarget "Sports-stars" */;
+			buildPhases = (
+				56C8998414C18BC600BFF196 /* Sources */,
+				56C8998514C18BC600BFF196 /* Frameworks */,
+				56C8998614C18BC600BFF196 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sports-stars";
+			productName = "Sports-stars";
+			productReference = 56C8998814C18BC600BFF196 /* Sports-stars.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56C899B314C18BC600BFF196 /* Sports-starsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56C899C914C18BC700BFF196 /* Build configuration list for PBXNativeTarget "Sports-starsTests" */;
+			buildPhases = (
+				56C899AF14C18BC600BFF196 /* Sources */,
+				56C899B014C18BC600BFF196 /* Frameworks */,
+				56C899B114C18BC600BFF196 /* Resources */,
+				56C899B214C18BC600BFF196 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56C899BA14C18BC600BFF196 /* PBXTargetDependency */,
+			);
+			name = "Sports-starsTests";
+			productName = "Sports-starsTests";
+			productReference = 56C899B414C18BC600BFF196 /* Sports-starsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56C8997F14C18BC600BFF196 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 56C8998214C18BC600BFF196 /* Build configuration list for PBXProject "Sports-stars" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 56C8997D14C18BC600BFF196;
+			productRefGroup = 56C8998914C18BC600BFF196 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56C8998714C18BC600BFF196 /* Sports-stars */,
+				56C899B314C18BC600BFF196 /* Sports-starsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56C8998614C18BC600BFF196 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C8999714C18BC600BFF196 /* InfoPlist.strings in Resources */,
+				56C899A014C18BC600BFF196 /* MainStoryboard.storyboard in Resources */,
+				56C899A514C18BC600BFF196 /* first.png in Resources */,
+				56C899A714C18BC600BFF196 /* first@2x.png in Resources */,
+				56C899AC14C18BC600BFF196 /* second.png in Resources */,
+				56C899AE14C18BC600BFF196 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56C899B114C18BC600BFF196 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C899C014C18BC700BFF196 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56C899B214C18BC600BFF196 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56C8998414C18BC600BFF196 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C8999914C18BC600BFF196 /* main.m in Sources */,
+				56C8999D14C18BC600BFF196 /* AppDelegate.m in Sources */,
+				56C899A314C18BC600BFF196 /* FirstViewController.m in Sources */,
+				56C899AA14C18BC600BFF196 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56C899AF14C18BC600BFF196 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C899C314C18BC700BFF196 /* Sports_starsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56C899BA14C18BC600BFF196 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56C8998714C18BC600BFF196 /* Sports-stars */;
+			targetProxy = 56C899B914C18BC600BFF196 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		56C8999514C18BC600BFF196 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56C8999614C18BC600BFF196 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		56C8999E14C18BC600BFF196 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56C8999F14C18BC600BFF196 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		56C899BE14C18BC700BFF196 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56C899BF14C18BC700BFF196 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56C899C414C18BC700BFF196 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		56C899C514C18BC700BFF196 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56C899C714C18BC700BFF196 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sports-stars/Sports-stars-Prefix.pch";
+				INFOPLIST_FILE = "Sports-stars/Sports-stars-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		56C899C814C18BC700BFF196 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sports-stars/Sports-stars-Prefix.pch";
+				INFOPLIST_FILE = "Sports-stars/Sports-stars-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		56C899CA14C18BC700BFF196 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sports-stars.app/Sports-stars";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sports-stars/Sports-stars-Prefix.pch";
+				INFOPLIST_FILE = "Sports-starsTests/Sports-starsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		56C899CB14C18BC700BFF196 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sports-stars.app/Sports-stars";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sports-stars/Sports-stars-Prefix.pch";
+				INFOPLIST_FILE = "Sports-starsTests/Sports-starsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56C8998214C18BC600BFF196 /* Build configuration list for PBXProject "Sports-stars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56C899C414C18BC700BFF196 /* Debug */,
+				56C899C514C18BC700BFF196 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56C899C614C18BC700BFF196 /* Build configuration list for PBXNativeTarget "Sports-stars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56C899C714C18BC700BFF196 /* Debug */,
+				56C899C814C18BC700BFF196 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		56C899C914C18BC700BFF196 /* Build configuration list for PBXNativeTarget "Sports-starsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56C899CA14C18BC700BFF196 /* Debug */,
+				56C899CB14C18BC700BFF196 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56C8997F14C18BC600BFF196 /* Project object */;
+}
