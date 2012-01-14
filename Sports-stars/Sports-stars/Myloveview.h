@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  Myloveview.h
 //  Sports-stars
 //
 //  Created by johnbass on 1/14/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface Myloveview : UIViewController
 
 @end

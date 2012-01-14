@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  Top10view.h
 //  Sports-stars
 //
 //  Created by johnbass on 1/14/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface Top10view : UIViewController
 
 @end
