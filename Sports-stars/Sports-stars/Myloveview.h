@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Myloveview : UIViewController
+@interface Myloveview : UIViewController<UITableViewDelegate,UITableViewDataSource>
+{
+    NSArray *liSTData;
+    
+}
+@property(nonatomic,retain)NSArray *liSTData;
 
 @end

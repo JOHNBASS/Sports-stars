@@ -10,6 +10,8 @@
 
 @implementation Top10view
 
+@synthesize listData;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,6 +36,45 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     NSLog(@"top10");
+    
+    NSArray *array = [[NSArray alloc] initWithObjects:@"row1",@"row2",@"row3",@"row4",@"row5",nil]; 
+    self.listData = array;
+    
+     
+    
+}
+
+
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{ 
+    return [self.listData count]; //回傳有幾筆資料要呈現 
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    //在繪製每一列時會呼叫的方法
+    static NSString *TableIdentifier = @"tableidentifier"; //設定一個就算離開畫面也還是抓得到的辨識目標 
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableIdentifier]; 
+    //呼叫以下方法以避免當已經沒有表格要呈現的時候 
+    if (cell == nil) { 
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:TableIdentifier] ; 
+    } 
+    //放入每列前圖片 
+    UIImage *image = [UIImage imageNamed:@"rowIcon.png"]; 
+    cell.imageView.image = image; 
+    //用 row 變數去得知現在繪製的是哪一列 
+    NSUInteger row = [indexPath row]; 
+    cell.textLabel.text = [listData objectAtIndex:row]; 
+    //更改字體大小 
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:15]; 
+    //判斷表格內容並顯示說明文字 
+    if (row == 0) { 
+        cell.detailTextLabel.text = @"this is detail text"; 
+    } 
+    return cell; 
 }
 
 - (void)viewDidUnload

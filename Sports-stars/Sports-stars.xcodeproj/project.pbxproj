@@ -465,6 +465,7 @@
 				56C899C814C18BC700BFF196 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56C899C914C18BC700BFF196 /* Build configuration list for PBXNativeTarget "Sports-starsTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +474,7 @@
 				56C899CB14C18BC700BFF196 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

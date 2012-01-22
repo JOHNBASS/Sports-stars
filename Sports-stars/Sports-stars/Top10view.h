@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Top10view : UIViewController
+@interface Top10view : UIViewController<UITableViewDelegate , UITableViewDataSource>
+{
+   NSArray *listData;   
+    
+}
+@property (nonatomic,retain) NSArray *listData;
 
 @end
