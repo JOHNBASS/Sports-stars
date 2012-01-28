@@ -60,6 +60,8 @@
     
     NSDictionary *title =[[entry objectAtIndex:0]objectForKey:@"title"];//名字
     
+    NSDictionary * logo =[[entry objectAtIndex:1]objectForKey:@"logo"];//圖片
+    
     
    video_title  = [[NSMutableArray alloc] init];
     video_url =[[NSMutableArray alloc] init];
@@ -81,13 +83,14 @@
     
     
     NSString * name = [title objectForKey:@"$t"];
+    NSString * image = [logo objectForKey:@"$t"];
     /////////////////////////////////////////////////////////////////////////
     
     NSArray *link =[[entry objectAtIndex:0] objectForKey:@"link"];
     NSString *href = [[link objectAtIndex:0] objectForKey:@"href"];
     
     
-    NSLog(@"name: %@ href:%@",name,href);
+    NSLog(@"name: %@ href:%@  image:%@ ",name,href,image);
     
 //    for ( int i = 0 ; i < 10; i++) {
 //        NSArray *link1 =[[entry objectAtIndex:i] objectForKey:@"link"];
@@ -159,9 +162,19 @@
     if (cell == nil) { 
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:TableIdentifier] ; 
     } 
-    //放入每列前圖片 
-    UIImage *image = [UIImage imageNamed:@"first.png"]; 
-    cell.imageView.image = image; 
+    
+    UIWebView *myWevView;  
+    myWevView = [[UIWebView alloc] init];
+    
+    [myWevView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.mobile01.com"]]];
+    [self.view addSubview:myWevView]; 
+    
+    //cell.imageView.image = myWevView;
+    
+      //放入每列前圖片 
+//    UIImage *image = [UIImage imageNamed:@"first.png"]; 
+//    cell.imageView.image = image; 
+    
     //用 row 變數去得知現在繪製的是哪一列 
     NSUInteger row = [indexPath row]; 
     cell.textLabel.text = [listData objectAtIndex:row]; 
