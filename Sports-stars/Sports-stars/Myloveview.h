@@ -10,9 +10,9 @@
 
 @interface Myloveview : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
-    NSArray *liSTData;
+    NSArray *listData;
     
 }
-@property(nonatomic,retain)NSArray *liSTData;
+@property(nonatomic,retain)NSArray *listData;
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation Myloveview
 
-@synthesize liSTData;
+@synthesize listData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,34 +46,32 @@
     
     
     NSArray *array = [[NSArray alloc] initWithObjects:@"test1",@"test2",@"test3", nil];
-    self.liSTData = array;
+    self.listData = array;
     
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.liSTData count];
+    return [self.listData count];
     
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-//    struct NSString * TableIdentifier1 = @"tableidentifier";
-    UITableViewCell *cell1 = [[UITableViewCell alloc] init];
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
 
 
     
     UIImage *image =[UIImage imageNamed:@"second.png"];
-    cell1.imageView.image = image;
-    
+    cell.imageView.image = image;
     NSInteger row = [indexPath row];
+    cell.detailTextLabel.text = @"this is detail text"; 
     
-    cell1.detailTextLabel.text = @"this is detail text"; 
+    cell.textLabel.text = [listData objectAtIndex:row];
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:15]; 
     
-    cell1.textLabel.text = [liSTData objectAtIndex:row];
-    cell1.textLabel.font = [UIFont boldSystemFontOfSize:15]; 
-    return cell1;
+    return cell;
     
     
 }

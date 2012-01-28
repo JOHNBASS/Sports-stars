@@ -37,22 +37,40 @@
     // Do any additional setup after loading the view from its nib.
     NSLog(@"top10");
     
-    NSArray *array = [[NSArray alloc] initWithObjects:@"row1",@"row2",@"row3",@"row4",@"row5",nil]; 
-    self.listData = array;
+    //NSArray *array = [[NSArray alloc] initWithObjects:@"row1",@"row2",@"row3",@"row4",@"row5",nil]; 
     
-     
+    
+    
+    
+    NSMutableArray *array_plist=[[NSMutableArray alloc]init];
+    
+    [array_plist  addObject:@"test1"];
+    [array_plist  addObject:@"test2"];
+    [array_plist  addObject:@"test3"];
+    [array_plist  addObject:@"test4"];  
+    [array_plist  addObject:@"test5"]; 
+    
+    
+    self.listData = array_plist;
     
 }
 
 
-
+#pragma mark- 回傳有幾筆資料在arrary
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{ 
     return [self.listData count]; //回傳有幾筆資料要呈現 
 }
 
 
+
+
+#pragma mark- 規劃list 每行的物件
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
+    
+    
     
     
     //在繪製每一列時會呼叫的方法
@@ -63,7 +81,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:TableIdentifier] ; 
     } 
     //放入每列前圖片 
-    UIImage *image = [UIImage imageNamed:@"rowIcon.png"]; 
+    UIImage *image = [UIImage imageNamed:@"first.png"]; 
     cell.imageView.image = image; 
     //用 row 變數去得知現在繪製的是哪一列 
     NSUInteger row = [indexPath row]; 
@@ -74,8 +92,12 @@
     if (row == 0) { 
         cell.detailTextLabel.text = @"this is detail text"; 
     } 
+    
+    
     return cell; 
 }
+
+#pragma mark- 
 
 - (void)viewDidUnload
 {
