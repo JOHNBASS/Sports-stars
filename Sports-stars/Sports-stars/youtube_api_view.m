@@ -42,9 +42,9 @@
     NSDictionary *title =[[entry objectAtIndex:0]objectForKey:@"title"];//名字
         
     
-    for ( in [title objectForKey:@"$t"]) {
-        <#statements#>
-    }
+//    for ( in [title objectForKey:@"$t"]) {
+//        <#statements#>
+//    }
     
     //    for (NSString * date in aArray_date) {
     //        NSLog(@"dates : %@",date);

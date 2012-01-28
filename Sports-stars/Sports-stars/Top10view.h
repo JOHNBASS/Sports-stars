@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "youtube_api_view.h"
+#import "SBJson.h"
+
 @interface Top10view : UIViewController<UITableViewDelegate , UITableViewDataSource>
 {
    NSArray *listData;   
-    
+   NSMutableArray *video_title;
+   NSMutableArray *video_url; 
 }
 @property (nonatomic,retain) NSArray *listData;
 

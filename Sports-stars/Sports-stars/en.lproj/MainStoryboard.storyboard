@@ -129,6 +129,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="SNd-uj-Jps" id="82p-yk-TaB"/>
+                                    <outlet property="delegate" destination="SNd-uj-Jps" id="Hfz-i9-RhR"/>
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="e8P-V0-sNR">

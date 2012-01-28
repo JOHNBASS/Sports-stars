@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SBJson.h"
 
 @interface youtube_api_view : UIView
 {
     
 }
-@property(nonatomic,retain)NSMutableArray *video_title;
+//@property(nonatomic,retain)NSMutableArray *video_title;
 
 -(void)youtube_api_Json;
 
