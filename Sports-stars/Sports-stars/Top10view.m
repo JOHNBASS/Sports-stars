@@ -60,20 +60,39 @@
     
     NSDictionary *title =[[entry objectAtIndex:0]objectForKey:@"title"];//名字
     
-    NSDictionary * logo =[[entry objectAtIndex:1]objectForKey:@"logo"];//圖片
+    NSDictionary *updataedTime =[[entry objectAtIndex:0]objectForKey:@"updated"];//更新時間
+    
+    NSDictionary *media_group =[[entry objectAtIndex:0]objectForKey:@"media$group"];//抓取圖片
+    
+    NSArray *media_thumbnail = [media_group objectForKey:@"media$thumbnail"];
+    
+    NSDictionary *url_image =[[media_thumbnail objectAtIndex:0]objectForKey:@"url"];//抓取圖片
+    
+    NSLog(@"updataedTime: %@",updataedTime);
     
     
    video_title  = [[NSMutableArray alloc] init];
     video_url =[[NSMutableArray alloc] init];
+    video_logo =[[NSMutableArray alloc] init];
+    video_update =[[NSMutableArray alloc] init];
     
     for ( int i = 0 ; i < 10; i++) {
     NSDictionary* title1 = [[entry objectAtIndex:i]objectForKey:@"title"];
         NSString * name1 = [title1 objectForKey:@"$t"];
         [video_title addObject:name1];
         
-        NSArray *link1 =[[entry objectAtIndex:i] objectForKey:@"link"];
+        NSArray *link1 = [[entry objectAtIndex:i] objectForKey:@"link"];
         NSString *href1 = [[link1 objectAtIndex:0] objectForKey:@"href"];
         [video_url addObject:href1];
+        
+        NSDictionary *media_group1 = [[entry objectAtIndex:i]objectForKey:@"media$group"];//抓取圖片
+        NSArray *media_thumbnail1 = [media_group1 objectForKey:@"media$thumbnail"];
+        NSDictionary *url_image1 = [[media_thumbnail1 objectAtIndex:0]objectForKey:@"url"];//抓取圖片
+        [video_logo addObject:url_image1];
+        
+            NSDictionary *updataedTime1 = [[entry objectAtIndex:i]objectForKey:@"updated"];//更新時間
+            NSString * updatadate1 = [updataedTime1 objectForKey:@"$t"];
+        [video_update addObject:updatadate1];
         
     }
     
@@ -83,14 +102,14 @@
     
     
     NSString * name = [title objectForKey:@"$t"];
-    NSString * image = [logo objectForKey:@"$t"];
+    NSString * updatadate = [updataedTime objectForKey:@"$t"];
     /////////////////////////////////////////////////////////////////////////
     
     NSArray *link =[[entry objectAtIndex:0] objectForKey:@"link"];
     NSString *href = [[link objectAtIndex:0] objectForKey:@"href"];
     
     
-    NSLog(@"name: %@ href:%@  image:%@ ",name,href,image);
+//    NSLog(@"name: %@ href:%@  image:%@ ",name,href,image);
     
 //    for ( int i = 0 ; i < 10; i++) {
 //        NSArray *link1 =[[entry objectAtIndex:i] objectForKey:@"link"];
@@ -147,7 +166,10 @@
 }
 
 
-
+//調整每列的高度 , 如果要客製化, 只要用 if (row==0) 判斷即可 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{ 
+    return 100; 
+}
 
 #pragma mark- 規劃list 每行的物件
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -163,27 +185,39 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:TableIdentifier] ; 
     } 
     
-    UIWebView *myWevView;  
-    myWevView = [[UIWebView alloc] init];
+    int section_index = indexPath.section;
     
-    [myWevView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.mobile01.com"]]];
-    [self.view addSubview:myWevView]; 
+    if (0 == section_index) {
+         
+        
+
+    }
     
-    //cell.imageView.image = myWevView;
     
       //放入每列前圖片 
-//    UIImage *image = [UIImage imageNamed:@"first.png"]; 
-//    cell.imageView.image = image; 
+    UIImage *image = [UIImage imageNamed:@"first.png"]; 
+    cell.imageView.image = image; 
     
     //用 row 變數去得知現在繪製的是哪一列 
     NSUInteger row = [indexPath row]; 
     cell.textLabel.text = [listData objectAtIndex:row]; 
     //更改字體大小 
     cell.textLabel.font = [UIFont boldSystemFontOfSize:15]; 
+    
     //判斷表格內容並顯示說明文字 
-    if (row == 0) { 
-        cell.detailTextLabel.text = @"this is detail text"; 
-    } 
+    for (int i = 0; i < 10; i++) {
+        if (row == i) {
+           cell.detailTextLabel.text = [video_update objectAtIndex:i]; 
+            
+            CGRect webFrame = CGRectMake(1.0, 1.0, 100, 100);
+            UIWebView *webView = [[UIWebView alloc] initWithFrame:webFrame];
+            
+            [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[video_logo objectAtIndex:i]]]];
+            [cell addSubview:webView];
+            
+        }
+        
+    }
     
     
     return cell; 

@@ -16,7 +16,9 @@
    NSArray *listData;   
    NSMutableArray *video_title;
    NSMutableArray *video_url; 
-   NSMutableArray *video_logo;  
+   NSMutableArray *video_logo; 
+   NSMutableArray *video_update;
+    
 }
 @property (nonatomic,retain) NSArray *listData;
 
