@@ -33,7 +33,7 @@
 -(void)youtube_api_Json
 {
     //youtube api 網址.
-    NSString *urlString = [NSString stringWithFormat:@"https://gdata.youtube.com/feeds/api/videos?alt=json&q=%@&orderby=title&start-index=1&max-results=10&v=2",@"王建民"];
+    NSString *urlString = [NSString stringWithFormat:@"https://gdata.youtube.com/feeds/api/videos?alt=json&q=%@+比賽&orderby=title&start-index=1&max-results=10&v=2",@"王建民"];
     //對中文轉換為nsutf8
     urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
