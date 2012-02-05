@@ -168,58 +168,71 @@
 
 //調整每列的高度 , 如果要客製化, 只要用 if (row==0) 判斷即可 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{ 
-    return 100; 
+    return 200; 
 }
 
 #pragma mark- 規劃list 每行的物件
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-
+    //用 row 變數去得知現在繪製的是哪一列 
+    NSUInteger row = indexPath.row; 
     
     //在繪製每一列時會呼叫的方法
     static NSString *TableIdentifier = @"tableidentifier"; //設定一個就算離開畫面也還是抓得到的辨識目標 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableIdentifier]; 
     //呼叫以下方法以避免當已經沒有表格要呈現的時候 
     if (cell == nil) { 
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:TableIdentifier] ; 
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableIdentifier] ; 
+        
     } 
-    
+
     int section_index = indexPath.section;
+    
     
     if (0 == section_index) {
          
+        UILabel *NameLabel = [[UILabel alloc] init];
+        NameLabel.frame = CGRectMake(20, 0, 300, 100);
+        NameLabel.text = [NSString stringWithFormat:@"%@",[video_title objectAtIndex:row]];
+        NameLabel.textColor = [UIColor blackColor];
+        NameLabel.backgroundColor = [UIColor clearColor];
+        NameLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(10)];
+        [cell addSubview:NameLabel];
         
+        NSLog(@"%d",row);
+        
+        CGRect webFrame = CGRectMake(30, 100, 120, 90);
+        UIWebView *webView = [[UIWebView alloc] initWithFrame:webFrame];
+        
+        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[video_logo objectAtIndex:row]]]];
+        [cell addSubview:webView];
 
     }
     
     
       //放入每列前圖片 
-    UIImage *image = [UIImage imageNamed:@"first.png"]; 
-    cell.imageView.image = image; 
+//    UIImage *image = [UIImage imageNamed:@"first.png"]; 
+//    cell.imageView.image = image; 
     
-    //用 row 變數去得知現在繪製的是哪一列 
-    NSUInteger row = [indexPath row]; 
-    cell.textLabel.text = [listData objectAtIndex:row]; 
-    //更改字體大小 
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:15]; 
+
+    
+//    cell.textLabel.text = [listData objectAtIndex:row]; 
+//    cell.textLabel.frame = CGRectMake(0, 0, 10, 10);
+//    //更改字體大小 
+//    cell.textLabel.font = [UIFont boldSystemFontOfSize:15]; 
+//    cell.detailTextLabel.text = [video_update objectAtIndex:row]; 
     
     //判斷表格內容並顯示說明文字 
-    for (int i = 0; i < 10; i++) {
-        if (row == i) {
-           cell.detailTextLabel.text = [video_update objectAtIndex:i]; 
+//    for (int i = 0; i <= 10; i++) {
+//        
+//        if (row == i) {
             
-            CGRect webFrame = CGRectMake(1.0, 1.0, 100, 100);
-            UIWebView *webView = [[UIWebView alloc] initWithFrame:webFrame];
-            
-            [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[video_logo objectAtIndex:i]]]];
-            [cell addSubview:webView];
-            
-        }
         
-    }
     
-    
+
+//        }
+//    }
     return cell; 
 }
 
